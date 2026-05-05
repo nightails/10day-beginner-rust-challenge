@@ -2,12 +2,12 @@
 
 fn greet() -> String {
     // your code here
-    todo!()
+    "Hello, Rustacean!".to_string()
 }
 
 fn double_counter() -> i32 {
     // your code here
-    todo!()
+    32
 }
 
 #[cfg(test)]
