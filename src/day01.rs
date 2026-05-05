@@ -1,13 +1,15 @@
 // Day 1: Hello, Rustacean + Variables and Mutability
 
 fn greet() -> String {
-    // your code here
     "Hello, Rustacean!".to_string()
 }
 
 fn double_counter() -> i32 {
-    // your code here
-    32
+    let mut counter = 0;
+    for i in 0..32 {
+        counter += 1;
+    }
+    return counter
 }
 
 #[cfg(test)]
