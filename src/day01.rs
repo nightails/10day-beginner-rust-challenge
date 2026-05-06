@@ -6,7 +6,7 @@ fn greet() -> String {
 
 fn double_counter() -> i32 {
     let mut counter = 0;
-    for i in 0..32 {
+    for _ in 0..32 {
         counter += 1;
     }
     return counter
