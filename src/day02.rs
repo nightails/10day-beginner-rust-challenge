@@ -8,9 +8,22 @@ fn describe_types() -> String {
     // - Remember: if the last expression in a function doesn't end with a semicolon,
     //   it becomes the return value — no `return` keyword needed.
 
+    let single = 42;
+    let double = 3.14;
+    let toggle = true;
+    let key = 'Z';
+    let tuple = (7, "Rust");
+
     format!(
         // fill in variables here
-        ""
+        "
+        int: {}\n
+        float: {}\n
+        bool: {}\n
+        char: {}\n
+        tuple: {:?}\n
+        ",
+        single, double, toggle, key, tuple,
     )
 }
 
