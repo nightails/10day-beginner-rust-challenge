@@ -12,7 +12,28 @@
 ///   'P' → "Basic"
 ///   anything else → "None"
 fn grade_message(score: i32) -> String {
-    todo!()
+    let mut grade = "";
+
+    if score >= 90 {
+        grade = "Excellent";
+    } else if score >= 75 {
+        grade = "Good";
+    } else if score >= 50 {
+        grade = "Pass";
+    } else {
+        grade = "Fail";
+    }
+
+    let char = grade.chars().next().unwrap();
+
+    grade = match char {
+        'E' => "Top",
+        'G' => "Decent",
+        'P' => "Basic",
+        _ => "None",
+    };
+
+    return grade.to_string();
 }
 
 #[cfg(test)]
