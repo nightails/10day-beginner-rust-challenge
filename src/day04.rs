@@ -4,7 +4,11 @@
 /// Notice the return type: `&str`. You're returning a slice borrowed from the input,
 /// not a new allocation.
 fn first_word(s: &str) -> &str {
-    todo!()
+    if s.is_empty() {
+        return ""
+    }
+    let mut parts = s.split_whitespace();
+    return parts.next().expect("REASON");
 }
 
 /// Return an uppercased copy of `s` with an exclamation mark appended.
@@ -12,7 +16,7 @@ fn first_word(s: &str) -> &str {
 ///
 /// Notice the return type: `String`. You're creating new owned data.
 fn shout(s: &str) -> String {
-    todo!()
+    return s.to_uppercase() + "!";
 }
 
 #[cfg(test)]
